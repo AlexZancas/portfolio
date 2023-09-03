@@ -1,0 +1,74 @@
+
+nav{
+    background:  rgba(0,0,0,0.9);
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+    height: fit-content;
+ 
+    & div img{
+        width: 2rem;
+        background: rgba(255, 255, 255, 0.3 ) ;
+        border-radius: .8rem;
+
+        &:hover{
+            background-color: aliceblue;
+            box-shadow: 0rem 0rem 0.2rem  rgb(245, 245, 245) ;
+        }
+      
+    }
+    & ul{
+        margin: 0.5rem ;
+       
+        & li.selected{
+            border: 1px solid white;
+            border-radius: 1rem;
+            box-shadow: 0rem 0rem 1rem 0.2rem rgba(218, 218, 218, 0.603);
+
+            & a{
+                pointer-events: none;
+                font-weight: 800;
+            }
+        }  
+
+        & li{
+            display: inline-flex;
+            flex-direction: column;
+            margin: 0rem 5rem 0rem 0rem;      
+
+            & a{
+                text-decoration: none;
+                color: aliceblue;
+                padding: 1rem;
+                display: block;
+                font-weight: 500;
+
+                &:hover{
+                    box-shadow: 0rem 0rem 0.5rem .2rem rgba(218, 218, 218, 0.3);
+                    border-radius: 0.8rem;
+                    font-weight: 800;
+                    text-decoration: none;
+                    color: aliceblue;
+                    
+                }
+
+            }
+            
+        }
+        
+    }
+    
+}
+
+@media (prefers-color-scheme: dark){
+    body {
+        color: #eee;
+        background: #3a3a3b;
+      }  
+}
